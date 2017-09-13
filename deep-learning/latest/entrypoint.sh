@@ -2,14 +2,12 @@
 
 USER_ID=${LOCAL_USER_ID:-9001}
 USER_NAME=${LOCAL_USER_NAME:-user}
-USER_HOME=${LOCAL_USER_HOME:-/home/user}
 
-useradd --shell /bin/bash -u $USER_ID -o -d $USER_HOME $USER_NAME
-export HOME=$USER_HOME
+export HOME=/home/$USER_NAME
+useradd --shell /bin/bash -u $USER_ID -o -d $HOME $USER_NAME 
 
 echo "${USER_NAME} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${USER_NAME}
 
-cd $USER_HOME
+cd $HOME
 
 exec /usr/local/bin/gosu $USER_NAME "$@"
-
