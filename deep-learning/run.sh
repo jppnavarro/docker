@@ -14,6 +14,6 @@ nvidia-docker run -it --network=host \
 	-e DISPLAY=$DISPLAY \
 	-e LOCAL_USER_ID=`id -u $USER` \
 	-e LOCAL_USER_NAME=$USER \
-	tecgraf/python-ds \
+	jppnavarro/deep-learning \
 	bash
 

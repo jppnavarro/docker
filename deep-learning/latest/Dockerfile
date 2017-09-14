@@ -4,7 +4,8 @@ FROM floydhub/dl-docker:cpu
 RUN apt-get update && apt-get install -y \
 	python3-dev \
 	python3-pip \
-	curl \
+	python3-tk \
+	curl \	
 	\
 	&& pip3 install --upgrade pip
 
