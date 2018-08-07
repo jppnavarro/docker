@@ -1,6 +1,6 @@
 1 - Baixar arquivo helloworld.py, que utiliza a biblioteca de Deep Learning Tensorflow:
 ```
-$ wget https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/1_Introduction/helloworld.py
+$ wget https://raw.githubusercontent.com/aymericdamien/TensorFlow-Examples/master/examples/1_Introduction/helloworld.py
 ```
 
 2 - Criar um container **tensorflow** persistente com espaço compartilhado **/home/verao**
